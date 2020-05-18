@@ -50,8 +50,8 @@ while True:
             if(detected_frames < 3):
                 continue
             vels.append(round(calculateVelocity(detected_frames, 0.009, FPS),0))
-            print(f'{detected_frames} caught and used to calculate velocity')
             vel = int(avg(vels))
+            print(f'{detected_frames} frames - {vel} km/h')
             detected_frames = 0
             flag = False
             
